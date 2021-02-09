@@ -6,6 +6,7 @@ import { Home } from "./components/Home";
 import { Products } from "./components/Products";
 import "./App.css";
 import { ProductDetails } from "./components/ProductDetails";
+import {Footer} from "./components/Footer";
 import { NotFound } from "./components/NotFound";
 
 function App() {
@@ -16,10 +17,11 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route >
           <Route exact path="/products" component={Products} />
-          <Route exact path="/products:id" component={NotFound} />
+          <Route exact path="/productdetails/:name/:price" component={ProductDetails} />
         </Route>
         <Route component={NotFound} />{" "}
       </Switch>
+      <Footer/>
     </BrowserRouter>
   );
 }
