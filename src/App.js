@@ -4,9 +4,10 @@ import { Routes } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Products } from "./components/Products";
+import { Kids } from "./components/Kids";
 import "./App.css";
 import { ProductDetails } from "./components/ProductDetails";
-import {Footer} from "./components/Footer";
+//import {Footer} from "./components/Footer";
 import { NotFound } from "./components/NotFound";
 
 function App() {
@@ -16,12 +17,13 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route >
-          <Route exact path="/products" component={Products} />
+          <Route exact path="/women" component={Products} />
+          <Route exact path="/kids" component={Kids} />
           <Route exact path="/productdetails/:name/:price" component={ProductDetails} />
         </Route>
         <Route component={NotFound} />{" "}
       </Switch>
-      <Footer/>
+     
     </BrowserRouter>
   );
 }

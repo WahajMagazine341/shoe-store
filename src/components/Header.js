@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 //Header imports
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -70,8 +70,9 @@ export const Header = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" >
         <Toolbar>
+        {/***
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -82,20 +83,27 @@ export const Header = () => {
             }}
           >
             <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          </IconButton>*/}
+           <ShoppingCartIcon fontSize="large"/>
+          <Typography variant="h5" className={classes.title}>
             Shoe Store
           </Typography>
           <Link to="/" style={{ color: "inherit", textDecoration: "inherit" }}>
             <Button color="inherit" className={classes.button}>
-              Home
+              Men
             </Button>
           </Link>
           <Link
-            to="/products"
+            to="/women"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            <Button className={classes.button}>Product</Button>
+            <Button className={classes.button}>Women</Button>
+          </Link>
+          <Link
+            to="/kids"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <Button className={classes.button}>Kids</Button>
           </Link>
 
           <Drawer open={open} onClose={toggleDrawer(false)} color="primary">

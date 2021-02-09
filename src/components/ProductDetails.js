@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useRouteMatch } from "react-router-dom";
+import {Footer} from "./Footer";
 
 export const ProductDetails = () => {
   console.log("productDetails");
@@ -7,24 +8,29 @@ export const ProductDetails = () => {
   const image = localStorage.getItem("url");
   //localStorage.clear();
 
-  console.log("url", image);
+  //console.log("url", image);
   //console.log(JSON.parse(url));
   //const{img} = useRouteMatch();
   //JSON.parse(obj);
   return (
-    <div>
-      <h1>Product details for {name}</h1>
-      <h1>Product details for {price}</h1>
-      
+    <div style={{  display:"inline-block",top:"50%", marginLeft:"2%"}}>
+      <h1 style={{  fontFamily: "cursive" , color:"#154360" }}>
+         {name}
+      </h1>
+      <h1 style={{  fontFamily: "cursive" ,color:"#154360"}}>
+        {price}
+      </h1>
+
       <img
         style={{
-          width: "400px",
-          marginLeft: "15%",
-          marginBottom: "3%",
+          
+          width:"550px",
+          height:"400px"
         }}
         src={image}
         alt="test"
       />
+      <Footer/>
     </div>
   );
 };

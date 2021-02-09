@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import {Footer} from "./Footer";
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Home = () => {
+export const Kids = () => {
   console.log("HOME");
   const classes = useStyles();
 
@@ -120,7 +119,7 @@ export const Home = () => {
               <Typography variant="h4" style={{ fontFamily: "cursive" }}>
                 {obj.name}
               </Typography>
-           
+            </Link>
 
             <Paper className={classes.paper} elevation={2}>
               <img
@@ -134,7 +133,7 @@ export const Home = () => {
               />
               <Divider variant="middle" />
             </Paper>
-            </Link>
+         
           </Grid>
         ))}
         ;
