@@ -6,6 +6,7 @@ import { Home } from "./components/Home";
 import { Products } from "./components/Products";
 import { Kids } from "./components/Kids";
 import "./App.css";
+import {Women} from "./components/Women";
 import { ProductDetails } from "./components/ProductDetails";
 //import {Footer} from "./components/Footer";
 import { NotFound } from "./components/NotFound";
@@ -17,7 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route >
-          <Route exact path="/women" component={Products} />
+          <Route exact path="/women" component={Women} />
           <Route exact path="/kids" component={Kids} />
           <Route exact path="/productdetails/:name/:price" component={ProductDetails} />
         </Route>
